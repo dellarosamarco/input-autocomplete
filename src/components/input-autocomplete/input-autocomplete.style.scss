@@ -1,0 +1,16 @@
+.input-autocomplete {
+    &__field {
+        padding: var(--spacing-4);
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius-3);
+        outline: none;
+
+        &:hover {
+            border-color: var(--border-color--hover);
+        }
+
+        &:focus {
+            border-color: var(--border-color--focus);
+        }
+    }
+}
