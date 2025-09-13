@@ -1,6 +1,7 @@
 :root {
     // Colors
     --primary-color: #ffffff;
+    --primary-color--hover: #f8f9fa;
 
     --action-color: #007bff;
     --action-color--hover: #0056b3;
@@ -21,8 +22,11 @@
     --spacing-8: 1rem;
 
     // Radius
-    --border-radius-1: 3px;
-    --border-radius-2: 4px;
-    --border-radius-3: 5px;
-    --border-radius-4: 6px;
+    --border-radius-1: 4px;
+    --border-radius-2: 5px;
+    --border-radius-3: 6px;
+    --border-radius-4: 7px;
+
+    // Shadows
+    --box-shadow-light: 0px 0px 5px rgb(0, 0, 0, 0.3);
 }

@@ -4,7 +4,12 @@ import { mock1 } from './mock';
 function App() {
   return (
     <div className='homepage'>
-      <InputAutocomplete data={mock1} searchKeys={['id', 'name']} />
+      <InputAutocomplete 
+        data={mock1} 
+        searchKeys={['id', 'name']} 
+        dropdownDisplayField={'name'} 
+        dropdownValueField={'id'} 
+      />
     </div>
   );
 }

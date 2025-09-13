@@ -1,8 +1,11 @@
 .input-autocomplete {
+    width: 200px;
+
     &__field {
+        width: 100%;
         padding: var(--spacing-4);
         border: 1px solid var(--border-color);
-        border-radius: var(--border-radius-3);
+        border-radius: var(--border-radius-2);
         outline: none;
 
         &:hover {
@@ -12,5 +15,9 @@
         &:focus {
             border-color: var(--border-color--focus);
         }
+    }
+
+    &__dropdown {
+        position: relative;
     }
 }

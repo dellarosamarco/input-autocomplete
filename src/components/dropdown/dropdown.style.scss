@@ -1,0 +1,25 @@
+.dropdown {
+    position: absolute;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-3);
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 200px;
+    box-shadow: var(--box-shadow-light);
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            padding: var(--spacing-4) var(--spacing-6);
+            background-color: var(--primary-color);
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--primary-color--hover);
+            }
+        }
+    }
+}
