@@ -1,16 +1,8 @@
-import InputAutocomplete from './components/input-autocomplete/input-autocomplete.component';
-import { mock1 } from './mock';
+import Showcase from './showcase/showcase.component';
 
-function App() {
+const App = () => {
   return (
-    <div className='homepage'>
-      <InputAutocomplete 
-        data={mock1} 
-        searchKeys={['id', 'name']} 
-        dropdownDisplayField={'name'} 
-        dropdownValueField={'id'} 
-      />
-    </div>
+    <Showcase></Showcase>
   );
 }
 
