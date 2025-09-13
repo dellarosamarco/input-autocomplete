@@ -3,7 +3,7 @@ import './input-autocomplete.style.scss';
 import Dropdown from "../dropdown/dropdown.component";
 import { useState } from "react";
 
-const InputAutocomplete = <T,>({ data, searchKeys, displayKey, onSelect }: InputAutocompleteProps<T>) => {
+const InputAutocomplete = <T,>({ data, searchKeys, displayKey, onSelect, dropdownCharactersThreshold }: InputAutocompleteProps<T>) => {
   const [filteredData, setFilteredData] = useState<T[]>(data);
   const [showDropdown, setShowDropdown] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
@@ -39,7 +39,10 @@ const InputAutocomplete = <T,>({ data, searchKeys, displayKey, onSelect }: Input
         onChange={(e) => onSearch(e.target.value)}
       />
       {
-        showDropdown && filteredData.length > 0 && <div className="input-autocomplete__dropdown">
+        showDropdown && 
+        filteredData.length > 0 &&
+        searchTerm.length >= dropdownCharactersThreshold &&
+        <div className="input-autocomplete__dropdown">
           <Dropdown
             data={filteredData} 
             displayKey={displayKey} 
