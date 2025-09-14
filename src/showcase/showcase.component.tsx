@@ -14,7 +14,7 @@ const Showcase = <Y,>() => {
     <div className='showcase'>
       <InputAutocomplete
         data={mock1}
-        dropdownCharactersThreshold={3}
+        dropdownCharactersThreshold={1}
         searchKeys={['id', 'name']} 
         displayKey={'name'}
         onSelect={onSelect}
