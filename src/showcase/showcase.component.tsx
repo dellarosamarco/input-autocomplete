@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import InputAutocomplete from '../components/input-autocomplete/input-autocomplete.component';
-import { mock1 } from '../mock';
 import './showcase.style.scss';
+import { ShowcaseProps } from './showcase.types';
 
-const Showcase = <Y,>() => {
+const Showcase = <Y,>({ data, searchKeys, displayKey }: ShowcaseProps<Y>) => {
   const [selectedValue, setSelectedValue] = useState<Y>();
 
   const onSelect = <T,>(item: T) => {
@@ -13,10 +13,10 @@ const Showcase = <Y,>() => {
   return (
     <div className='showcase'>
       <InputAutocomplete
-        data={mock1}
+        data={data}
         dropdownCharactersThreshold={1}
-        searchKeys={['id', 'name']} 
-        displayKey={'name'}
+        searchKeys={searchKeys} 
+        displayKey={displayKey}
         onSelect={onSelect}
       />
 
